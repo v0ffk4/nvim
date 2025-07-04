@@ -8,7 +8,8 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     opts = {
       flavour = "mocha", -- Choose: latte, frappe, macchiato, mocha (default: auto)
       transparent_background = false, -- Enable/disable transparency
@@ -23,6 +24,6 @@ return {
   { "rose-pine/neovim", lazy = true },
   { "sainnhe/everforest", lazy = true },
   { "romainl/Apprentice", lazy = true },
-  { "EdenEast/nightfox.nvim", lazy = true },
+  { "EdenEast/nightfox.nvim", lazy = false, priority = 1000 },
   { "Shatur/neovim-ayu", lazy = true },
 }
