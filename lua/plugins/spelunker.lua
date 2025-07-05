@@ -12,4 +12,3 @@ return {
     vim.opt.spell = false
   end,
 }
-
