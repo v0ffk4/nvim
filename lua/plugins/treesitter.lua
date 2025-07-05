@@ -1,10 +1,25 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "master",
+  lazy = false,
+  build = ":TSUpdate",
   opts = {
-    ensure_installed = { "svelte", "javascript", "html" },
-    highlight = {
-      additional_vim_regex_highlighting = { "svelte" },
+    ensure_installed = {
+      "bash",
+      "html",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "python",
+      "query",
+      "regex",
+      "tsx",
+      "typescript",
+      "vim",
+      "yaml",
     },
+    highlight = {},
   },
 }
-
