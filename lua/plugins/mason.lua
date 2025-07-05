@@ -9,7 +9,7 @@ return {
       "eslint_d",
       "jsonls",
       "html",
-      "css-lsp",
+      "cssls",
       "css_variables"
     },
   },
