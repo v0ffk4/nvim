@@ -1,7 +1,14 @@
 return {
-  { 'echasnovski/mini.pick', version = '*' },
-  { 'echasnovski/mini.pairs', version = '*' },
-  { 'echasnovski/mini.comment', version = '*', lazy = false },
+  { 'echasnovski/mini.pick', version = '*', opts = {} },
+  { 'echasnovski/mini.pairs', version = '*', opts = {
+      modes = {
+          insert = true,
+          command = false,
+          terminal = false
+        }
+      }
+  },
+  { 'echasnovski/mini.comment', version = '*', opts = {} },
   { 'echasnovski/mini.surround', version = '*', opts = {
       mappings = {
         add = "gsa",
@@ -12,9 +19,6 @@ return {
       },
     },
   },
-  config = function()
-    require("mini.pairs").setup()
-    require("mini.comment").setup()
-    require("mini.pick").setup()
-  end,
+  { 'echasnovski/mini.move', version = '*', opts = {} },
 }
+
