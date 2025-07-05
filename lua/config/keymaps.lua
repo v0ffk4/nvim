@@ -21,12 +21,3 @@ end, { desc = "Find buffers" })
 vim.keymap.set("n", "<leader>fr", function()
     require("mini.pick").builtin.grep_live()
 end, { desc = "Find GREP" })
-
--- Mini comments
--- vim.keymap.set(
---     'n', '<leader>cc',
---     function()
---         require('mini.comment').toggle_lines()
---     end,
---     { desc = 'Comment selection' }
--- )
