@@ -36,6 +36,33 @@ vim.keymap.set("n", "<leader>fo", function()
   })
 end, { desc = "Show document outline" })
 
+-- VIM
+-- Pick colortheme
+vim.keymap.set("n", "fc", function()
+  local colors = vim.fn.getcompletion("", "color")
+
+  require("mini.pick").start({
+    source = {
+      items = colors,
+      name = "Colorschemes",
+      choose = function(item)
+        vim.cmd.colorscheme(item)
+      end,
+      preview = function(item)
+        -- Preview without persisting
+        vim.cmd("silent! colorscheme " .. item)
+      end,
+    },
+    window = {
+      config = {
+        width = 60,
+        height = 15,
+        border = "double",
+      },
+    },
+  })
+end, { desc = "Colorscheme browser" })
+
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
   desc = "LSP actions",

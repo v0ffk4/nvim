@@ -9,3 +9,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
+
+-- Add colorscheme picker to which-key
+require("which-key").add({
+  { "<leader>f", group = "start" }, -- group
+  { "<leader>fc", desc = "Browse colorschemes", mode = "n" },
+})
