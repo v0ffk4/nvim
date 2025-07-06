@@ -3,7 +3,7 @@
 --  Add any additional options here
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.cmd.colorscheme("nightfox")
+vim.cmd.colorscheme("rose-pine")
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

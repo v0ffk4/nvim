@@ -8,7 +8,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = false,
+    lazy = true,
     opts = {
       flavour = "mocha", -- Choose: latte, frappe, macchiato, mocha (default: auto)
       transparent_background = false, -- Enable/disable transparency
