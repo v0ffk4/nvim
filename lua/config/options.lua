@@ -12,6 +12,6 @@ vim.opt.expandtab = true
 
 -- Add colorscheme picker to which-key
 require("which-key").add({
-  { "<leader>f", group = "start" }, -- group
-  { "<leader>fc", desc = "Browse colorschemes", mode = "n" },
+  { "<leader>b", group = "Browse" }, -- group
+  { "<leader>bc", desc = "Colorschemes", mode = "n" },
 })
