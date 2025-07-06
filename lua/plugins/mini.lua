@@ -1,5 +1,6 @@
 return {
   { "echasnovski/mini.pick", version = "*", opts = {} },
+  { "echasnovski/mini.extra", version = "*", opts = {} },
   {
     "echasnovski/mini.pairs",
     version = "*",

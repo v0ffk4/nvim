@@ -22,6 +22,20 @@ vim.keymap.set("n", "<leader>fr", function()
   require("mini.pick").builtin.grep_live()
 end, { desc = "Find GREP" })
 
+vim.keymap.set("n", "<leader>ft", function()
+  require("mini.extra").pickers.treesitter({
+    source = "current", -- Show symbols from current buffer
+    mode = "symbols", -- Focus on document symbols
+  })
+end, { desc = "Show document AST" })
+
+vim.keymap.set("n", "<leader>fo", function()
+  require("mini.extra").pickers.lsp({
+    source = "current", -- Show symbols from current buffer
+    scope = "document_symbol", -- Scope document symbols
+  })
+end, { desc = "Show document outline" })
+
 -- LSP
 vim.api.nvim_create_autocmd("LspAttach", {
   desc = "LSP actions",
