@@ -2,35 +2,41 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
--- Mini Pick
+-- Mini
+local mpk = require("mini.pick")
+local mex = require("mini.extra")
 vim.keymap.set("n", "<leader>bf", function()
-  require("mini.pick").builtin.files()
+  mpk.builtin.files()
 end, { desc = "Find files" })
 
 vim.keymap.set("n", "<leader>bg", function()
-  require("mini.pick").builtin.files({ tool = "git" })
+  mpk.builtin.files({ tool = "git" })
 end, { desc = "Find git files" })
 
 vim.keymap.set("n", "<leader>bb", function()
-  require("mini.pick").builtin.buffers()
+  mpk.builtin.buffers()
 end, { desc = "Find buffers" })
 
 vim.keymap.set("n", "<leader>br", function()
-  require("mini.pick").builtin.grep_live()
+  mpk.builtin.grep_live()
 end, { desc = "Find GREP" })
 
 vim.keymap.set("n", "<leader>bt", function()
-  require("mini.extra").pickers.treesitter({
+  mex.pickers.treesitter({
     source = "current", -- Show symbols from current buffer
     mode = "symbols", -- Focus on document symbols
   })
 end, { desc = "Show document AST" })
 
 vim.keymap.set("n", "<leader>bo", function()
-  require("mini.extra").pickers.lsp({
+  mex.pickers.lsp({
     source = "current", -- Show symbols from current buffer
     scope = "document_symbol", -- Scope document symbols
   })
@@ -41,7 +47,7 @@ end, { desc = "Show document outline" })
 vim.keymap.set("n", "bc", function()
   local colors = vim.fn.getcompletion("", "color")
 
-  require("mini.pick").start({
+  mpk.start({
     source = {
       items = colors,
       name = "Colorschemes",
