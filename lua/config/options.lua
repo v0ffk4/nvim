@@ -8,7 +8,7 @@ vim.cmd.colorscheme("catppuccin-mocha")
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 
 -- Add colorscheme picker to which-key
 require("which-key").add({
