@@ -2,7 +2,7 @@
 
 _with configured LSP and autocomplete. Uses - [Oil File Explorer](https://github.com/stevearc/oil.nvim) and [Mini.Pick](https://github.com/echasnovski/mini.pick)_
 
-The design goal is to create a lightweight and usable setup.
+The design goal is to create a lightweight and usable setup focused on Svelte development.
 
 ### Plugins
 
@@ -20,5 +20,8 @@ The design goal is to create a lightweight and usable setup.
 
 ### Issues
 - for now the key configs are all over the place, working on that
+
+### Installation
+`git clone https://github.com/v0ffk4/nvim ~/.config/nvim`
 
 ### LIGHTWEIGHT BABY!
