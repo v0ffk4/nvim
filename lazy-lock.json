@@ -1,5 +1,5 @@
 {
-  "Apprentice": { "branch": "master", "commit": "cb051ec95d12fa34169bb384142b8e50e328cd97" },
+  "Apprentice": { "branch": "master", "commit": "9098604bb9ec51539d3ae39ea68219519633beca" },
   "blink.cmp": { "branch": "main", "commit": "9bcb14b43852a6f2bfd5ac9ef29cb5cf09b1b39b" },
   "catppuccin": { "branch": "main", "commit": "fa42eb5e26819ef58884257d5ae95dd0552b9a66" },
   "conform.nvim": { "branch": "master", "commit": "973f3cb73887d510321653044791d7937c7ec0fa" },
