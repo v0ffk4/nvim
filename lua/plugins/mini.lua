@@ -18,11 +18,12 @@ return {
     version = "*",
     opts = {
       mappings = {
-        add = "gsa",
-        delete = "gsd",
-        find = "gsf",
-        highlight = "gsh",
-        update = "gsu",
+        add = "gmsa",
+        delete = "gmsd",
+        find = "gmsf",
+        highlight = "gmsh",
+        update = "gmsu",
+        replace = "gmsr",
       },
     },
   },
