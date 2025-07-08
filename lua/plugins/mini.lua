@@ -5,21 +5,12 @@ return {
     config = function()
       local mpk = require("mini.pick")
 
-      vim.keymap.set("n", "<leader>ff", function()
-        mpk.builtin.files()
-      end, { desc = "Find files" })
-
+      vim.keymap.set("n", "<leader>ff", mpk.builtin.files, { desc = "Find files" })
       vim.keymap.set("n", "<leader>fg", function()
-        mpk.builtin.files({ tool = "git" })
+        mpk.builtin.files({ tool = "git", tool_opts = { use_git_root = true } })
       end, { desc = "Find git files" })
-
-      vim.keymap.set("n", "<leader>fb", function()
-        mpk.builtin.buffers()
-      end, { desc = "Find buffers" })
-
-      vim.keymap.set("n", "<leader>fr", function()
-        mpk.builtin.grep_live()
-      end, { desc = "Find GREP" })
+      vim.keymap.set("n", "<leader>fb", mpk.builtin.buffers, { desc = "Find buffers" })
+      vim.keymap.set("n", "<leader>fr", mpk.builtin.grep_live, { desc = "Find GREP" })
     end,
   },
   {
