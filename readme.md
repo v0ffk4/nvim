@@ -18,9 +18,6 @@ The design goal is to create a lightweight and usable setup focused on Svelte de
 - [spelunker](https://github.com/kamykn/spelunker.vim) - spellcheck  
 - [whichKey](https://github.com/folke/which-key.nvim) - keys legend
 
-### Issues
-- for now the key configs are all over the place, working on that
-
 ### Installation
 `git clone https://github.com/v0ffk4/nvim ~/.config/nvim`
 
