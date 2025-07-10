@@ -4,6 +4,13 @@
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
+
+local map = vim.keymap.set
+
+-- Buffer switch
+map("n", "<Tab>", "<cmd>bnext<CR>")
+map("n", "<S-Tab>", "<cmd>bprev<CR>")
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Oil
