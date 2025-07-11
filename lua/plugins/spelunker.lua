@@ -9,6 +9,6 @@ return {
     end,
   },
   init = function()
-    vim.opt.spell = false
+    vim.o.spell = false
   end,
 }
