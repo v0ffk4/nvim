@@ -6,17 +6,16 @@
 --  See `:help hlsearch`
 
 local map = vim.keymap.set
+local mpk = require("mini.pick")
 
 -- Buffer switch
 map("n", "<Tab>", "<cmd>bnext<CR>")
 map("n", "<S-Tab>", "<cmd>bprev<CR>")
 
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
--- Oil
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Pick colortheme
-vim.keymap.set("n", "fc", function()
+map("n", "fc", function()
   local colors = vim.fn.getcompletion("", "color")
 
   mpk.start({
