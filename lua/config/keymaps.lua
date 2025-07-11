@@ -39,3 +39,9 @@ map("n", "fc", function()
     },
   })
 end, { desc = "Colorscheme browser" })
+
+-- Add require colorscheme to which-key
+require("which-key").add({
+  { "<leader>f", group = "Browse" }, -- group
+  { "<leader>fc", desc = "Colorschemes", mode = "n" },
+})
