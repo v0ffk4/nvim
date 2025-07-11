@@ -11,6 +11,8 @@ local mpk = require("mini.pick")
 -- Buffer switch
 map("n", "<Tab>", "<cmd>bnext<CR>")
 map("n", "<S-Tab>", "<cmd>bprev<CR>")
+map("n", "<C-Del>", "<cmd>bd<CR>")
+-- map("n", "CS-Del", "<cmd>%bd<CR>")
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
