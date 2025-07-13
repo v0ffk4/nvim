@@ -1,33 +1,34 @@
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("vtsls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("svelte")
 vim.lsp.enable("css_variables")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("cssls")
 
-vim.diagnostic.config({
-  virtual_lines = true,
-  -- virtual_text = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
-  float = {
-    border = "rounded",
-    source = true,
-  },
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = "󰅚 ",
-      [vim.diagnostic.severity.WARN] = "󰀪 ",
-      [vim.diagnostic.severity.INFO] = "󰋽 ",
-      [vim.diagnostic.severity.HINT] = "󰌶 ",
-    },
-    numhl = {
-      [vim.diagnostic.severity.ERROR] = "ErrorMsg",
-      [vim.diagnostic.severity.WARN] = "WarningMsg",
-    },
-  },
-})
+-- vim.diagnostic.config({
+--   virtual_lines = true,
+--   -- virtual_text = true,
+--   underline = true,
+--   update_in_insert = false,
+--   severity_sort = true,
+--   float = {
+--     border = "rounded",
+--     source = true,
+--   },
+--   signs = {
+--     text = {
+--       [vim.diagnostic.severity.ERROR] = "󰅚 ",
+--       [vim.diagnostic.severity.WARN] = "󰀪 ",
+--       [vim.diagnostic.severity.INFO] = "󰋽 ",
+--       [vim.diagnostic.severity.HINT] = "󰌶 ",
+--     },
+--     numhl = {
+--       [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+--       [vim.diagnostic.severity.WARN] = "WarningMsg",
+--     },
+--   },
+-- })
 
 -- Autocmd
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -58,15 +59,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local client = vim.lsp.get_client_by_id(event.data.client_id)
 
     -- Svelte fix
-    if client and client.name == "svelte" then
-      vim.api.nvim_create_autocmd("BufWritePost", {
-        pattern = { "*.js", "*.ts" },
-        group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
-        callback = function(ctx)
-          client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-        end,
-      })
-    end
+    -- if client and client.name == "svelte" then
+    --   vim.api.nvim_create_autocmd("BufWritePost", {
+    --     pattern = { "*.js", "*.ts" },
+    --     group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
+    --     callback = function(ctx)
+    --       client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+    --     end,
+    --   })
+    -- end
 
     if
       client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
