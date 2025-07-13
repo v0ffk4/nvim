@@ -3,6 +3,7 @@ vim.lsp.enable("ts_ls")
 vim.lsp.enable("svelte")
 vim.lsp.enable("css_variables")
 vim.lsp.enable("jsonls")
+vim.lsp.enable("cssls")
 
 vim.diagnostic.config({
   virtual_lines = true,
