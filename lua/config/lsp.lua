@@ -56,6 +56,18 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+    -- Svelte fix
+    if client and client.name == "svelte" then
+      vim.api.nvim_create_autocmd("BufWritePost", {
+        pattern = { "*.js", "*.ts" },
+        group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
+        callback = function(ctx)
+          client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+        end,
+      })
+    end
+
     if
       client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
     then
@@ -73,17 +85,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         group = highlight_augroup,
         callback = vim.lsp.buf.clear_references,
       })
-
-      -- Svelte fix
-      if client.name == "svelte" then
-        vim.api.nvim_create_autocmd("BufWritePost", {
-          pattern = { "*.js", "*.ts" },
-          group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
-          callback = function(ctx)
-            client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-          end,
-        })
-      end
 
       -- When LSP detaches: Clears the highlighting
       vim.api.nvim_create_autocmd("LspDetach", {
