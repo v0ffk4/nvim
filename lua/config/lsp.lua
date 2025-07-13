@@ -41,11 +41,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
     map("K", vim.lsp.buf.hover, "Hover Documentation")
     map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
+    map("gd", vim.lsp.buf.definition, "Goto Declaration")
     map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-    map("<leader>la", vim.lsp.buf.code_action, "Code Action")
-    map("<leader>lr", vim.lsp.buf.rename, "Rename all references")
-    map("<leader>lf", vim.lsp.buf.format, "Format")
-    map("<leader>lv", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
+    map("<F4>", vim.lsp.buf.code_action, "Code Action")
+    map("<F2>", vim.lsp.buf.rename, "Rename all references")
 
     local function client_supports_method(client, method, bufnr)
       if vim.fn.has("nvim-0.11") == 1 then
@@ -80,7 +79,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
           pattern = { "*.js", "*.ts" },
           group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
           callback = function(ctx)
-            -- Here use ctx.match instead of ctx.file
             client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
           end,
         })
