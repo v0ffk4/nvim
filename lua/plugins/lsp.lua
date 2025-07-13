@@ -25,6 +25,18 @@ return {
               vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
               vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
               vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+              -- Svelte fix
+              local client = vim.lsp.get_client_by_id(event.data.client_id)
+              if client.name == "svelte" then
+                vim.api.nvim_create_autocmd("BufWritePost", {
+                  pattern = { "*.js", "*.ts" },
+                  group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
+                  callback = function(ctx)
+                    -- Here use ctx.match instead of ctx.file
+                    client:notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+                  end,
+                })
+              end
             end,
           })
         end,
