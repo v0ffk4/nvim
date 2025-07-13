@@ -42,10 +42,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gl", vim.diagnostic.open_float, "Open Diagnostic Float")
     map("K", vim.lsp.buf.hover, "Hover Documentation")
     map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
-    map("gd", vim.lsp.buf.definition, "Goto Declaration")
+    map("gd", vim.lsp.buf.definition, "Goto Definition")
     map("gD", vim.lsp.buf.declaration, "Goto Declaration")
     map("<F4>", vim.lsp.buf.code_action, "Code Action")
-    map("<F2>", vim.lsp.buf.rename, "Rename all references")
+    map("<F2>", vim.lsp.buf.rename, "Rename All References")
 
     local function client_supports_method(client, method, bufnr)
       if vim.fn.has("nvim-0.11") == 1 then
