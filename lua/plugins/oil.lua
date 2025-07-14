@@ -13,7 +13,12 @@ return {
       },
     })
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-    -- vim.keymap.set("n", "<space>-", require("oil").toggle_float, { desc = "Open parent directory" })
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "oil",
+      callback = function()
+        vim.opt_local.cursorline = true
+      end,
+    })
   end,
   -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
