@@ -1,10 +1,10 @@
 vim.lsp.enable("lua_ls")
-vim.lsp.enable("vtsls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("svelte")
 vim.lsp.enable("css_variables")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("cssls")
+vim.lsp.enable("vtsls")
 
 -- vim.diagnostic.config({
 --   virtual_lines = true,
