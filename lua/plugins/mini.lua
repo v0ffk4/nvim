@@ -5,6 +5,20 @@ return {
     config = function()
       local mpk = require("mini.pick")
 
+      mpk.setup({
+        highlights = {
+          current = "MiniPickCurrent", -- Ensure this matches your hl group
+        },
+      })
+
+      -- Then define the highlight group
+      vim.api.nvim_set_hl(0, "MiniPickCurrent", {
+        bg = "#504945",
+        fg = "#ebdbb2",
+        ctermbg = 239,
+        ctermfg = 223,
+      })
+
       vim.keymap.set("n", "<leader>ff", mpk.builtin.files, { desc = "Find files" })
       vim.keymap.set("n", "<leader>fg", function()
         mpk.builtin.files({ tool = "git", tool_opts = { use_git_root = true } })
