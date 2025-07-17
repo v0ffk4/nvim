@@ -12,12 +12,6 @@ return {
     opts = {
       flavour = "mocha", -- Choose: latte, frappe, macchiato, mocha (default: auto)
       transparent_background = false, -- Enable/disable transparency
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        telescope = true,
-        treesitter = true,
-      },
     },
   },
   { "rose-pine/neovim", lazy = true },
@@ -25,4 +19,9 @@ return {
   { "romainl/Apprentice", lazy = true },
   { "EdenEast/nightfox.nvim", lazy = true },
   { "Shatur/neovim-ayu", lazy = true },
+  {
+    "thesimonho/kanagawa-paper.nvim",
+    lazy = false,
+    opts = {},
+  },
 }
