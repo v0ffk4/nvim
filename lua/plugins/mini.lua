@@ -51,12 +51,16 @@ return {
     version = "*",
     opts = {
       mappings = {
-        add = "gmsa",
-        delete = "gmsd",
-        find = "gmsf",
-        highlight = "gmsh",
-        update = "gmsu",
-        replace = "gmsr",
+        add = "gmsa", -- Add surrounding in Normal and Visual modes
+        delete = "gmsd", -- Delete surrounding
+        find = "gmsf", -- Find surrounding (to the right)
+        find_left = "gmsF", -- Find surrounding (to the left)
+        highlight = "gmsh", -- Highlight surrounding
+        replace = "gmsr", -- Replace surrounding
+        update_n_lines = "gmsn", -- Update `n_lines`
+
+        suffix_last = "gml", -- Suffix to search with "prev" method
+        suffix_next = "gmn", -- Suffix to search with "next" method
       },
     },
   },
