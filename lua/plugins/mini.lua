@@ -59,8 +59,8 @@ return {
         replace = "gmsr", -- Replace surrounding
         update_n_lines = "gmsn", -- Update `n_lines`
 
-        suffix_last = "gml", -- Suffix to search with "prev" method
-        suffix_next = "gmn", -- Suffix to search with "next" method
+        suffix_last = "l", -- Suffix to search with "prev" method
+        suffix_next = "n", -- Suffix to search with "next" method
       },
     },
   },
