@@ -18,7 +18,7 @@ vim.o.signcolumn = "yes"
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 
--- vim.cmd.colorscheme("catppuccin-mocha")
+vim.opt.termguicolors = true
 vim.g.have_nerd_font = false
 
 vim.o.tabstop = 2

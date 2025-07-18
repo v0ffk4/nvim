@@ -9,6 +9,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = true,
+    priority = 1000,
     opts = {
       flavour = "mocha", -- Choose: latte, frappe, macchiato, mocha (default: auto)
       transparent_background = false, -- Enable/disable transparency
@@ -17,11 +18,15 @@ return {
   { "rose-pine/neovim", lazy = true },
   { "sainnhe/everforest", lazy = true },
   { "romainl/Apprentice", lazy = true },
-  { "EdenEast/nightfox.nvim", lazy = true },
+  { "EdenEast/nightfox.nvim", lazy = false },
   { "Shatur/neovim-ayu", lazy = true },
   {
     "thesimonho/kanagawa-paper.nvim",
     lazy = false,
     opts = {},
+    -- init = function()
+    --   vim.cmd.colorscheme("kanagawa-paper-ink")
+    -- end,
+    -- opts = { ... },
   },
 }
