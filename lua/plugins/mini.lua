@@ -5,7 +5,7 @@ return {
     config = function()
       local mpk = require("mini.pick")
       mpk.setup()
-      vim.api.nvim_set_hl(0, "MiniPickCurrent", { link = "CursorLine" })
+      -- vim.api.nvim_set_hl(0, "MiniPickCurrent", { link = "CursorLine" })
 
       vim.keymap.set("n", "<leader>ff", mpk.builtin.files, { desc = "Find files" })
       vim.keymap.set("n", "<leader>fg", function()
