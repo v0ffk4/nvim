@@ -14,6 +14,7 @@ vim.o.mouse = "a"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.signcolumn = "yes"
+vim.o.swapfile = false
 
 vim.o.cursorline = true
 vim.o.scrolloff = 10
