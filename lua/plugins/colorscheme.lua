@@ -4,11 +4,11 @@ return {
     "folke/tokyonight.nvim",
     lazy = true,
   },
-  { "rebelot/kanagawa.nvim", lazy = true },
+  { "rebelot/kanagawa.nvim", lazy = false },
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
     priority = 1000,
     opts = {
       flavour = "mocha", -- Choose: latte, frappe, macchiato, mocha (default: auto)
@@ -16,7 +16,7 @@ return {
     },
   },
   { "rose-pine/neovim", lazy = true },
-  { "sainnhe/everforest", lazy = true },
+  { "sainnhe/everforest", lazy = false },
   { "romainl/Apprentice", lazy = true },
   { "EdenEast/nightfox.nvim", lazy = false },
   { "Shatur/neovim-ayu", lazy = true },
@@ -28,5 +28,10 @@ return {
     --   vim.cmd.colorscheme("kanagawa-paper-ink")
     -- end,
     -- opts = { ... },
+  },
+  {
+    "vague2k/vague.nvim",
+    lazy = false,
+    opts = {},
   },
 }

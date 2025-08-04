@@ -1,3 +1,3 @@
 -- vim.cmd.colorscheme("catppuccin-mocha")
 -- vim.cmd.colorscheme("kanagawa-paper-ink")
-vim.cmd.colorscheme("nightfox")
+vim.cmd.colorscheme("vague")
