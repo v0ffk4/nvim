@@ -7,6 +7,7 @@ return {
     "svelte",
     "javascript",
     "typescript",
+    "json",
     "lua",
     "python",
     "markdown",
