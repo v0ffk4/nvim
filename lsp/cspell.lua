@@ -4,11 +4,13 @@ return {
     "--stdio",
   },
   filetypes = {
-    "svx",
-    "md",
     "svelte",
-    "js",
-    "ts",
+    "javascript",
+    "typescript",
+    "lua",
+    "python",
+    "markdown",
+    "text",
   },
   root_markers = {
     ".git",

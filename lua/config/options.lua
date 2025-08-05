@@ -44,3 +44,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.schedule(function()
   vim.o.clipboard = "unnamedplus"
 end)
+
+-- Set svx filetype
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.svx",
+  callback = function()
+    vim.bo.filetype = "markdown" -- Set filetype to 'svx'
+  end,
+})
+
