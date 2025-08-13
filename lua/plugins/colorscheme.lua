@@ -15,11 +15,11 @@ return {
       transparent_background = false, -- Enable/disable transparency
     },
   },
-  { "rose-pine/neovim", lazy = true },
+  { "rose-pine/neovim", lazy = false },
   { "sainnhe/everforest", lazy = false },
   { "romainl/Apprentice", lazy = true },
   { "EdenEast/nightfox.nvim", lazy = false },
-  { "Shatur/neovim-ayu", lazy = true },
+  { "Shatur/neovim-ayu", lazy = false },
   {
     "thesimonho/kanagawa-paper.nvim",
     lazy = false,

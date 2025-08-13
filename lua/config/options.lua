@@ -41,9 +41,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Sync clipboard between OS and Neovim.
-vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
-end)
+-- vim.schedule(function()
+--   vim.o.clipboard = "unnamedplus"
+-- end)
 
 -- Set svx filetype
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -52,4 +52,3 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "markdown" -- Set filetype to 'svx'
   end,
 })
-
