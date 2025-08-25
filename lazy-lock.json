@@ -9,6 +9,7 @@
   "gruvbox.nvim": { "branch": "main", "commit": "12c2624287dc827edb5d72b2bc4c9619e692a554" },
   "kanagawa-paper.nvim": { "branch": "master", "commit": "6fca75ee0de76f5c9964aab89de6ac7bd4df5e2f" },
   "kanagawa.nvim": { "branch": "master", "commit": "debe91547d7fb1eef34ce26a5106f277fbfdd109" },
+  "kanso.nvim": { "branch": "main", "commit": "151dbc23fe890d09c26df11b1208dd8129dca012" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
   "mason.nvim": { "branch": "main", "commit": "7dc4facca9702f95353d5a1f87daf23d78e31c2a" },

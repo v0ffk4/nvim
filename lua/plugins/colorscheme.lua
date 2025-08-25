@@ -34,4 +34,9 @@ return {
     lazy = false,
     opts = {},
   },
+  {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 }
