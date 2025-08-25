@@ -20,8 +20,8 @@ map("n", "<Leader>li", "<cmd>LspInfo<CR>", { desc = "LSP info" })
 -- Reveal in finder
 map("n", "<Leader>fR", "<cmd>Rfind<CR>", { desc = "Reveal in finder" })
 
--- Pick colortheme
-map("n", "fc", function()
+-- Pick colorscheme
+map("n", "<Leader>fc", function()
   local colors = vim.fn.getcompletion("", "color")
 
   mpk.start({
