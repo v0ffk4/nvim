@@ -13,12 +13,10 @@ map("n", "<Tab>", "<cmd>bnext<CR>")
 map("n", "<S-Tab>", "<cmd>bprev<CR>")
 map("n", "<C-Del>", "<cmd>bd<CR>")
 -- No search hl
-map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+map("n", "<Leader>h", "<cmd>nohlsearch<CR>")
 -- Lsp
 map("n", "<Leader>lh", "<cmd>help lspconfig-all | only<CR>", { desc = "LSPs Help" })
 map("n", "<Leader>li", "<cmd>LspInfo<CR>", { desc = "LSP info" })
--- Reveal in finder
-map("n", "<Leader>fR", "<cmd>Rfind<CR>", { desc = "Reveal in finder" })
 
 -- Pick colorscheme
 map("n", "<Leader>fc", function()
