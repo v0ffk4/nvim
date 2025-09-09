@@ -44,6 +44,10 @@ map("n", "<Leader>fc", function()
   })
 end, { desc = "Colorscheme browser" })
 
+map("n", "<Leader>fv", function()
+  require("color-converter").pick()
+end, { desc = "Convert color" })
+
 -- Add require colorscheme to which-key
 require("which-key").add({
   { "<leader>f", group = "Browse" }, -- group
