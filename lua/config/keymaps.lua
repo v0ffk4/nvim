@@ -44,7 +44,7 @@ map("n", "<Leader>fc", function()
   })
 end, { desc = "Colorscheme browser" })
 
-map("n", "<Leader>fv", function()
+map("v", "<Leader>c", function()
   require("color-converter").pick()
 end, { desc = "Convert color" })
 
